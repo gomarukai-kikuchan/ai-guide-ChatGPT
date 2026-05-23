@@ -162,6 +162,10 @@
     cursor: pointer;
 
     box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+
+    display: block;
+
+    margin: 0 auto;
 }
 
 .copy-btn:active {
@@ -310,9 +314,7 @@
     <div class="highlight-box" style="background-color: #f8f9fa;">
         <p style="font-weight: bold; margin-bottom: 5px; color: #5f6368;">✦ 例えばこんな風に聞いてみよう！</p>
         <div class="prompt-box" id="promptText">明日の前橋市南部の天気を、複数の天気予報サイトを参考にしながら、もっとも可能性の高い予報を3時間ごとに分けて教えて</div>
-    <center>
         <button class="copy-btn" onclick="copyPrompt()">このプロンプトをコピーする</button>
-    </center>
     </div>
 
     <script>
