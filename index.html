@@ -116,6 +116,58 @@
         }
 
     }
+
+.highlight-box {
+    background-color: #fff7cc !important;
+
+    border-radius: 14px;
+
+    padding: 22px;
+
+    margin-top: 40px;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.prompt-box {
+    background-color: #ffffff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    padding: 16px;
+
+    margin-top: 12px;
+    margin-bottom: 16px;
+
+    line-height: 1.9;
+
+    font-size: 1.15rem;
+}
+
+.copy-btn {
+    background-color: #1f6b45;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 14px 20px;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+}
+
+.copy-btn:active {
+    transform: translateY(1px);
+}
+
 </style>
 
 </head>
@@ -254,6 +306,22 @@
     <p><mark>「ボケ防止」</mark>にもなるので一石二鳥です。</p>
 
     <p>是非この機会に、AIに触れてみて下さい。</p>
+
+    <div class="highlight-box" style="background-color: #f8f9fa;">
+        <p style="font-weight: bold; margin-bottom: 5px; color: #5f6368;">✦ 例えばこんな風に聞いてみよう！</p>
+        <div class="prompt-box" id="promptText">明日の前橋市南部の天気を、複数の天気予報サイトを参考にしながら、もっとも可能性の高い予報を3時間ごとに分けて教えて</div>
+        <button class="copy-btn" onclick="copyPrompt()">このプロンプトをコピーする</button>
+    </div>
+
+    <script>
+        // ボタンを押したらプロンプトをコピーする仕掛け
+        function copyPrompt() {
+            var text = document.getElementById("promptText").innerText;
+            navigator.clipboard.writeText(text).then(function() {
+                alert("プロンプトをコピーしました！AIアプリに貼り付けて使ってみてね。");
+            });
+        }
+    </script>
 
 </div>
 
